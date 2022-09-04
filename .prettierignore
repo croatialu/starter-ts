@@ -1,0 +1,6 @@
+packages/**/*.d.ts
+packages/**/*.js
+.nyc_output
+dist
+types
+coverage

@@ -1,0 +1,72 @@
+{
+  "name": "starter-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "browser": "./dist/index.umd.js",
+  "types": "./types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "start": "tsx watch ./src/main.ts",
+    "dev": "concurrently \"pnpm run dev:types\" \"pnpm run dev:source\"",
+    "build": "pnpm run build:types && pnpm run build:source",
+    "lint": "concurrently \"pnpm run lint:source\" \"pnpm run lint:spec\"",
+    "format": "prettier \"**/*.ts\" --ignore-path ./.prettierignore --write && git status",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "dev:types": "tsc --watch",
+    "dev:source": "rollup -cw",
+    "build:types": "tsc",
+    "build:source": "rollup -c",
+    "lint:source": "eslint '**/**.ts' --ignore-pattern '**/*.spec.ts'",
+    "lint:spec": "eslint '**/**.spec.ts'",
+    "clean": "rimraf dist types",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "prettier --ignore-path ./.prettierignore --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<github name>/<repo name>.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<github name>/<repo name>/issues"
+  },
+  "homepage": "https://github.com/<github name>/<repo name>#readme",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^8.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "@vitest/coverage-c8": "^0.22.1",
+    "concurrently": "^7.3.0",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.79.0",
+    "rollup-plugin-typescript2": "^0.33.0",
+    "tsx": "^3.9.0",
+    "typescript": "^4.8.2",
+    "vitest": "^0.22.1"
+  }
+}
