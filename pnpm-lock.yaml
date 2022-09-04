@@ -3,7 +3,6 @@ lockfileVersion: 5.4
 specifiers:
   '@commitlint/cli': ^17.1.2
   '@commitlint/config-angular': ^17.1.0
-  '@commitlint/config-conventional': ^17.1.0
   '@rollup/plugin-typescript': ^8.4.0
   '@typescript-eslint/eslint-plugin': ^5.36.1
   '@typescript-eslint/parser': ^5.36.1
@@ -14,6 +13,7 @@ specifiers:
   eslint-plugin-import: ^2.26.0
   husky: ^8.0.1
   lint-staged: ^13.0.3
+  pnpm: ^7.10.0
   prettier: ^2.7.1
   rimraf: ^3.0.2
   rollup: ^2.79.0
@@ -25,7 +25,6 @@ specifiers:
 devDependencies:
   '@commitlint/cli': 17.1.2
   '@commitlint/config-angular': 17.1.0
-  '@commitlint/config-conventional': 17.1.0
   '@rollup/plugin-typescript': 8.4.0_id3sp2lbl4kx3dskm7teaj32um
   '@typescript-eslint/eslint-plugin': 5.36.1_lbwfnm54o3pmr3ypeqp3btnera
   '@typescript-eslint/parser': 5.36.1_yqf6kl63nyoq5megxukfnom5rm
@@ -36,6 +35,7 @@ devDependencies:
   eslint-plugin-import: 2.26.0_wyxuyzvlfep3lsyoibc4fosfq4
   husky: 8.0.1
   lint-staged: 13.0.3
+  pnpm: 7.10.0
   prettier: 2.7.1
   rimraf: 3.0.2
   rollup: 2.79.0
@@ -101,13 +101,6 @@ packages:
     engines: {node: '>=v14'}
     dependencies:
       '@commitlint/config-angular-type-enum': 17.0.0
-    dev: true
-
-  /@commitlint/config-conventional/17.1.0:
-    resolution: {integrity: sha512-WU2p0c9/jLi8k2q2YrDV96Y8XVswQOceIQ/wyJvQxawJSCasLdRB3kUIYdNjOCJsxkpoUlV/b90ZPxp1MYZDiA==}
-    engines: {node: '>=v14'}
-    dependencies:
-      conventional-changelog-conventionalcommits: 5.0.0
     dev: true
 
   /@commitlint/config-validator/17.1.0:
@@ -969,15 +962,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       compare-func: 2.0.0
-      q: 1.5.1
-    dev: true
-
-  /conventional-changelog-conventionalcommits/5.0.0:
-    resolution: {integrity: sha512-lCDbA+ZqVFQGUj7h9QBKoIpLhl8iihkO0nCTyRNzuXtcd7ubODpYB04IFy31JloiJgG0Uovu8ot8oxRzn7Nwtw==}
-    engines: {node: '>=10'}
-    dependencies:
-      compare-func: 2.0.0
-      lodash: 4.17.21
       q: 1.5.1
     dev: true
 
@@ -2881,6 +2865,12 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       find-up: 4.1.0
+    dev: true
+
+  /pnpm/7.10.0:
+    resolution: {integrity: sha512-DGjcJ3OAHRtyqZJek6OzqLir7hqNaayX4FxMKSXlnpgQRVZsU2jtym/FlR1PS4VmSy+p1Ps/aPz62iHNG0eReQ==}
+    engines: {node: '>=14.6'}
+    hasBin: true
     dev: true
 
   /postcss/8.4.16:

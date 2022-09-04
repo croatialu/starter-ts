@@ -2,7 +2,7 @@
   "name": "starter-ts",
   "version": "1.0.0",
   "description": "",
-  "packageManager": "pnpm@7.9.0",
+  "packageManager": "pnpm@7.10.0",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
   "browser": "./dist/index.umd.js",
@@ -19,6 +19,7 @@
     "types"
   ],
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "start": "tsx watch ./src/main.ts",
     "dev": "concurrently \"pnpm run dev:types\" \"pnpm run dev:source\"",
     "build": "pnpm run build:types && pnpm run build:source",
@@ -65,6 +66,7 @@
     "eslint-plugin-import": "^2.26.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "pnpm": "^7.10.0",
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.79.0",
