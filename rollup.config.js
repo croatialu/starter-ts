@@ -6,7 +6,16 @@ export default defineConfig({
   output: [
     {
       format: 'esm',
-      file: './dist/index.esm.js',
+      file: './dist/index.mjs',
+    },
+    {
+      format: 'cjs',
+      file: './dist/index.cjs.js',
+    },
+    {
+      format: 'umd',
+      file: './dist/index.umd.js',
+      name: 'lalala',
     },
   ],
   plugins: [typescript(
