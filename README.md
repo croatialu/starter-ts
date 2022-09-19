@@ -9,7 +9,8 @@
 5. 安装依赖 
 
 
-## 功能
-pnpm 管理，更快的包安装速度
 
 
+## License
+
+[MIT](./LICENSE) License © 2022 [croatialu](https://github.com/CroatiaParanoia)
